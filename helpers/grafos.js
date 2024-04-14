@@ -77,6 +77,7 @@ const mostrarResultado = async (nuevaMatriz) => {
     let salir = " ";
     do {
         const { puntoInicial, puntoFinal } = await hacerPreguntas(nuevaMatriz.length);
+        console.log('');
         const { distance, path } = await dijkstra(nuevaMatriz, puntoInicial, puntoFinal)
         console.log(`La ruta mas corta entre el nodo ${puntoInicial} y el nodo ${puntoFinal} es: ${path}`)
         console.log("con un peso de: " + distance);
